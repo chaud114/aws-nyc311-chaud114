@@ -61,3 +61,19 @@ The model’s predictions are off by about 1.84 days on average. The R² value o
 
 ### Limitation
 The model is simple and may miss important patterns in the data. It also assumes a linear relationship, which may not match real-world complaint resolution behavior. Missing values and noisy timestamps can also reduce performance.
+
+## Comparison with SageMaker models
+
+- **SageMaker notebook used:** Linear Learner — Stakeholder Question 2 (Predict days to close a complaint)
+- **Task type:** Regression (predicting `days_to_close`)
+
+### Key metrics (SageMaker Linear Learner)
+- MAE: ~1.89 days
+- RMSE: ~4.01
+- R²: ~0.378
+
+### Comparison to sklearn model
+The SageMaker Linear Learner model performed very similarly to the sklearn Linear Regression model from Day 27, with nearly the same MAE and R² values.
+
+### Workflow reflection
+The built-in SageMaker workflow is more useful when working with larger datasets or when scaling is important, since it handles training and deployment outside the notebook. For this small-to-medium dataset and simple regression problem, sklearn was easier and faster to use, so SageMaker does not feel necessary here. However, it would be more valuable in a production setting where models need to run on large data or be deployed for repeated use.
