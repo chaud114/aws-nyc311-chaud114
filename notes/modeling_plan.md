@@ -7,7 +7,7 @@ Predict how long (in days) a 311 complaint will take to be resolved at the time 
 
 ## Data source
 - **S3 path:** s3://your-bucket-name/modeling/resolution_time_modeling.csv
-- **Records:** [put df.shape[0] here]
+- **Records:** (173851, 8)
 - **Athena query:** sql/athena_to_modeling.sql
 
 ## Features
