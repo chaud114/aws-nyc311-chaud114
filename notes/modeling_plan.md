@@ -44,3 +44,20 @@ Predict how long (in days) a 311 complaint will take to be resolved at the time 
 - Fit baseline linear regression model
 - Evaluate model performance using RMSE and MAE
 - Analyze feature importance and errors
+
+## Baseline Model Results
+
+- **Model:** Linear Regression
+- **Features used:** same numerical feature columns used in training (update with your feature_cols list)
+- **Target:** days_to_close
+- **Train/test split:** 80/20, random_state=42
+
+### Metrics
+- Mean Absolute Error (MAE): 1.84 days
+- R² Score: 0.381
+
+### Interpretation
+The model’s predictions are off by about 1.84 days on average. The R² value of 0.381 means the model explains about 38% of the variation in resolution time, so it captures some patterns but is not very strong yet.
+
+### Limitation
+The model is simple and may miss important patterns in the data. It also assumes a linear relationship, which may not match real-world complaint resolution behavior. Missing values and noisy timestamps can also reduce performance.
